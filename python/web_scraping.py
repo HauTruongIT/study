@@ -28,5 +28,6 @@ for i in range(len(trs)):
     except:
         continue
 
+print(data)
 questions.insert_many(data)
 client.close()

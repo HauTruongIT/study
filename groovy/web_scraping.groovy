@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.*;
 import com.mongodb.*
 
 // Config Webdriver
-System.setProperty("webdriver.chrome.driver", "study/sources/chromedriver");
+System.setProperty("webdriver.chrome.driver", "sources/chromedriver");
 ChromeOptions chromeOptions = new ChromeOptions();
 chromeOptions.addArguments("--verbose", "--ignore-certificate-errors");
 WebDriver driver = new ChromeDriver();
