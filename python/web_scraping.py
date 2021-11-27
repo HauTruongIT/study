@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
 url = "https://stackoverflow.com/questions"
-client = MongoClient(host="app-db", port=27017)
+client = MongoClient(host="localhost", port=27017)
 
 # Config MongoDB
 db = client.webscraping
