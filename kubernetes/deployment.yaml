@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    tier: server
+    app: app-server
+spec:
+  selector:
+    matchLabels:
+      app: app-server
+  replicas: 3
+  template:
+    metadata:
+      name: app-server
+      labels:
+        app: app-server
+    spec:
+      containers:
+        - name: tomcat
+          image: tomcat
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    tier: database
+    app: app-db
+spec:
+  selector:
+    matchLabels:
+      app: app-db
+  replicas: 3
+  template:
+    metadata:
+      name: app-db
+      labels:
+        app: app-db
+    spec:
+      containers:
+        - name: mongo
+          image: mongo
